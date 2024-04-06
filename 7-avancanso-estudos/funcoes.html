@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Funções</h1>
+    <p>Digite um numero: <input type="number" name="num" id="num"></p>
+    <input type="button" value="verificar" onclick="contar()">
+    <p id="res">Par ou impar</p>
+    <script>
+        var res = document.getElementById('res')
+        var num = document.getElementById('num')
+        function contar(){
+            num = Number(num.value)
+            if(num % 2 == 0){
+                return'é par'
+            }else{
+                return' é impar'
+            }
+            res.innerHTML = `O numero ${num} ${n}`
+        }
+        var n = contar(Number(num.value))
+    </script>
+</body>
+</html>

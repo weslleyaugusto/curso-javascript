@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de multas!</h1>
+    <form action="ac.php">
+        <label for="vel">Velocidade:</label>
+        <input type="number" name="vel" id="vel"> km/h
+
+
+        <input type="button" value="verificar" onclick="multar()">
+    </form>
+    <p id="res"></p>
+    <script>
+        var res = document.getElementById('res')
+        function multar(){
+            var vel = Number(document.getElementById('vel').value)
+            if(vel > 60){
+            res.innerHTML ='Voce foi multado por excesso de velocidade!'
+            res.innerHTML +='<p>Dirija sempre com cinto de segurança!</p>'
+            }
+        }
+        
+    </script>
+</body>
+</html>

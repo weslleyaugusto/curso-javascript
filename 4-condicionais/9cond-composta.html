@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aeroporto</title>
+</head>
+<body>
+    <h1>Aeroporto</h1>
+    <form action="pk.php">
+        <label for="ipais">Pais de origem: </label>
+        <input type="text" name="pais" id="ipais">
+    </form>
+    <input type="button" value="verificar" onclick="verificar()">
+    <p id="res"></p>
+
+    <script>
+        var res = document.getElementById('res')
+        var pais = document.getElementById('ipais')
+
+        function verificar(){
+            if(pais.value == 'Brasil'){
+                res.innerHTML = 'Você veio do Brasil, então é brasileiro(a)!'
+            }else{
+                res.innerHTML = 'Você não veio do Brasil, então é estrangeiro!'
+            }
+        }
+    </script>
+</body>
+</html>

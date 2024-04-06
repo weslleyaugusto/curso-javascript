@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            background-color: rgb(50, 0, 159);
+        }
+    main{
+            background-color: white;
+            padding: 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Verificação de produtos</h1>
+        <form action="produtos.php">
+            <label for="iproduto">Produto: </label>
+            <input type="text" name="produto" id="iproduto" list="produtos">
+            <datalist id="produtos">
+                <optgroup>
+                    <option value="Maçã"></option>
+                    <option value="Manga"></option>
+                    <option value="Banana"></option>
+                    <option value="Mamão"></option>
+                    <option value="Kiwi"></option>
+                    <option value="Abacate"></option>
+                </optgroup>
+            </datalist>
+            <input type="reset" value="limpar">
+            <input type="button" value="Checar preço" onclick="checar()">
+        </form>
+        
+        <p id="res"></p>
+    </main>
+
+    <script>
+        function checar(){
+            var res = document.getElementById('res')
+            var produto = document.getElementById('iproduto').value
+
+            switch(produto){
+                case 'Banana':
+                    res.innerHTML =`As bananas custam R$0,39 o kilo!`
+                    break
+                case 'Maçã':
+                    res.innerHTML = `As maçãs custam R$0,53 o kilo!`
+                    break
+                case 'Manga':
+                    res.innerHTML = `As mangas custam R$0,69 o kilo!`
+                    break
+                case 'Mamão':
+                    res.innerHTML = `Os mamões custam R$0,35 o kilo!`
+                    break
+                case 'Kiwi':
+                    res.innerHTML = 'Os kiwis custam R$0,43 o kilo!'
+                    break
+                case 'Abacate':
+                    res.innerHTML = 'Os abacates custam R$0,78 o kilo!'
+                default:
+                    res.innerHTML = 'Produto não encontrado.';
+                }
+            }       
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+    <style>
+    body{
+        background-color: rgb(0, 0, 193);
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+    }p{
+        margin: 5px;
+    }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com dom</h1>
+    <p id="p1">Por id</p>
+    <p name="p1">Por nome</p>
+    <p class="p1">Por classe</p>
+    <p>Por tag</p>
+    <p id="p1q">Por query selector</p>
+    <p >Clique em mim!</p>
+    <p>Aprendendo a  usar <strong>DOM</strong> em javascript!</p>
+    <script>
+        var ip = window.document.getElementById('p1')
+        var n1 = document.getElementsByName('p1')[0]
+        var c1 = document.getElementsByClassName('p1')[0]
+        var t1 = document.getElementsByTagName('p')[3]
+        var q1 = document.querySelector('p#p1q')
+        ip.innerHTML = 'Selecionado por id'
+        n1.innerHTML = 'Selecionado por nome'
+        c1.innerHTML = 'Selecionado por classe'
+        t1.innerHTML = 'Selecionado tag'
+        q1.innerHTML = 'Selecionado por query selector'
+
+        </script>
+</body>
+</html>
