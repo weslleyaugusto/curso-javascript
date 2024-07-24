@@ -64,3 +64,8 @@ function finalizar(){
 
     }
 }
+
+function limpar(){
+    sel.innerHTML = ''
+    res.innerHTML = ''
+}
